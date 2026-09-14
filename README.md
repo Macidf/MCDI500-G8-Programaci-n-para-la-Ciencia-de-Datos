@@ -39,7 +39,8 @@ SHA-256 de cada archivo quedan registrados en [`data/raw/README_DATOS.md`](data/
 ├── README.md
 ├── requirements.txt            Dependencias con versiones fijadas
 ├── pyrightconfig.json          Resolución del paquete src/ en el editor
-├── F1/                         Fase 1 — mapa conceptual técnico
+├── F1/                         Fase 1 — definición del proyecto
+│   └── F1_Definición.ipynb     Problemática, objetivos y entorno científico
 ├── F2/                         Fase 2 — notebooks ejecutables
 │   ├── F2_01_Obtencion_Exploracion.ipynb
 │   ├── F2_02_Limpieza_Transformacion.ipynb
@@ -104,10 +105,12 @@ python -c "import sys; sys.path.insert(0, 'src'); import ponds, pandas, numpy; p
 
 ## 6. Ejecución
 
-Los notebooks de F2 deben ejecutarse **en orden**, porque cada uno usa la salida del anterior.
+Se comienza por la lectura de `F1/F1_Definición.ipynb`, que no contiene código. Luego, los
+notebooks de F2 deben ejecutarse **en orden**, porque cada uno usa la salida del anterior.
 
 | Orden | Notebook | Qué hace | Produce |
 |---|---|---|---|
+| 0 | `F1_Definición.ipynb` | Lectura previa: problemática, objetivos, entorno científico y relación con el mapa conceptual (solo markdown) | — |
 | 1 | `F2_01_Obtencion_Exploracion.ipynb` | Carga trazable, diagnóstico de defectos, estructura temporal | `data/raw/README_DATOS.md`, figuras f01–f05 |
 | 2 | `F2_02_Limpieza_Transformacion.ipynb` | Pipeline de 12 etapas con bitácora, escalamiento | `data/processed/ponds_limpio.csv`, `ponds_escalado.csv`, figuras f06–f07 |
 | 3 | `F2_03_Validacion.ipynb` | Contratos de calidad y pruebas normales, límite y de excepción | `docs/registro_validacion.csv` |
@@ -149,13 +152,13 @@ El detalle de cada decisión está en [`docs/decisiones.md`](docs/decisiones.md)
 
 | Fase | Contenido | Estado |
 |---|---|---|
-| F1 | Definición del problema, objetivos, mapa conceptual, entorno reproducible | Completada |
+| F1 | Definición del problema, objetivos, mapa conceptual y entorno reproducible (`F1/F1_Definición.ipynb`) | Completada |
 | F2 | Obtención, exploración, limpieza, transformación y validación | Completada |
 | F3 | Análisis y modelado | Pendiente |
 | F4 | Resultados y comunicación | Pendiente |
 
 ## 9. Equipo
 
-| Integrante | 
+| Integrante |
 |---|
-| Mauricio Cid Fuentes | 
+| Mauricio Cid Fuentes |
