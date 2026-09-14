@@ -1,0 +1,33 @@
+# Entorno virtual
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Datos crudos: no se versionan (se descargan desde Kaggle, ver data/raw/README_DATOS.md)
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/README_DATOS.md
+
+# Datos intermedios y procesados: se regeneran ejecutando los notebooks de F2
+data/interim/
+data/processed/*.csv
+
+# Documentos de entrega (se generan fuera del repositorio)
+*.docx
+*.pdf
+
+# Sistema operativo / editores
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/

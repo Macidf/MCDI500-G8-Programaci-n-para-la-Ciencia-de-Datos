@@ -1,0 +1,23 @@
+categoria,prueba,estado,detalle,ejecutado
+Normal,N01 Dataset procesado supera todos los contratos,OK,10 contratos OK,2026-09-13 23:45:07
+Normal,N02 Conservacion de registros crudo -> procesado,OK,"74,707 = 74,796 - 38 vacias - 51 sin hora",2026-09-13 23:45:07
+Normal,N03 Rejilla temporal regular por estanque,OK,paso constante de 20 min en los 3 estanques,2026-09-13 23:45:07
+Normal,N04 Sin valores imposibles y tipos correctos,OK,temperatura minima 14.50 C; variables float64,2026-09-13 23:45:07
+Normal,N05 Nulos residuales solo en huecos largos,OK,todos los nulos residuales estan en huecos > 3 lecturas,2026-09-13 23:45:07
+Normal,N06 Escalado z-score correcto por estanque,OK,media 0 y desviacion 1 por estanque,2026-09-13 23:45:07
+Normal,N07 Pipeline completo sobre datos sinteticos validos,OK,dataset sintetico de 3 estanques supera los contratos,2026-09-13 23:45:07
+Limite,L01 Hueco de exactamente 1 h se interpola,OK,hueco de 3 lecturas: rellenado y exacto,2026-09-13 23:45:07
+Limite,L02 Hueco de 1 h + 20 min no se interpola,OK,hueco de 4 lecturas: intacto (4 nulos),2026-09-13 23:45:07
+Limite,L03 Nulos en los extremos no se extrapolan,OK,no extrapola antes de la primera ni despues de la ultima lectura,2026-09-13 23:45:07
+Limite,L04 Valores en el borde exacto del rango fisico,OK,"[5.0, 50.0] se conservan; 4.99 y 50.01 se anulan",2026-09-13 23:45:07
+Limite,L05 Dataset de un unico registro,OK,1 registro atraviesa el pipeline; solo falla C08 (se esperan 3 estanques),2026-09-13 23:45:07
+Limite,L06 Escalado de una serie constante,OK,"serie constante: resultado NaN, nunca infinito",2026-09-13 23:45:07
+Excepcion,X01 Archivo de datos inexistente,OK,FileNotFoundError con instrucciones de descarga,2026-09-13 23:45:07
+Excepcion,X02 Dataset vacio,OK,C01 FALLA y assert_valido lanza ErrorValidacion,2026-09-13 23:45:07
+Excepcion,X03 Columna obligatoria ausente,OK,columna ausente detectada por C02,2026-09-13 23:45:07
+Excepcion,X04 Tipo de dato incorrecto,OK,variable como texto detectada por C03,2026-09-13 23:45:07
+Excepcion,X05 Clave temporal duplicada,OK,"clave (estanque, timestamp) repetida detectada por C05",2026-09-13 23:45:07
+Excepcion,X06 Valor fuera del dominio fisico,OK,temperatura de 80 C detectada por C07,2026-09-13 23:45:07
+Excepcion,X07 Fecha imposible en el archivo crudo,OK,31-02-2022 se descarta y su instante queda como hueco explicito,2026-09-13 23:45:07
+Excepcion,X08 Centinela de Excel en el archivo crudo,OK,'#VALUE!' registrado en la bitacora y convertido sin romper el casting,2026-09-13 23:45:07
+Excepcion,X09 Parametros invalidos en el escalado,OK,metodo desconocido -> ValueError; columna ausente -> KeyError,2026-09-13 23:45:07
