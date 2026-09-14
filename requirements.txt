@@ -1,0 +1,15 @@
+# --- Nucleo cientifico ---
+numpy==2.1.0
+pandas==2.2.2
+
+# --- Visualizacion ---
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# --- Entorno de notebooks y ejecucion reproducible ---
+jupyterlab==4.6.3
+ipykernel==7.3.0
+nbconvert==7.17.1
+
+# --- Formato columnar para el dataset procesado ---
+pyarrow==25.0.1
