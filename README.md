@@ -156,11 +156,6 @@ El detalle de cada decisión está en [`docs/decisiones.md`](docs/decisiones.md)
 
 ## 9. Equipo
 
-| Integrante | Rol |
-|---|---|
-| Mauricio Cid Fuentes | [ROL] |
-| [INTEGRANTE 2] | [ROL] |
-| [INTEGRANTE 3] | [ROL] |
-| [INTEGRANTE 4] | [ROL] |
-
-Docente: [DOCENTE RESPONSABLE]
+| Integrante | 
+|---|
+| Mauricio Cid Fuentes | 
